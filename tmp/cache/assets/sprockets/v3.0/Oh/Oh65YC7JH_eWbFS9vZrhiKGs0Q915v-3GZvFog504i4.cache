@@ -1,0 +1,7 @@
+I"–(function() {
+  this.exampleApp = angular.module('app.mainApp', []).run(function() {
+    return console.log('mainApp running');
+  });
+
+}).call(this);
+:ET
