@@ -28,7 +28,10 @@ class TweetsController < ApplicationController
       "Sethrogen",
       "rickygervais",
       "WilliamShatner",
-      "jack"
+      "jack",
+      "LeoDiCaprio",
+      "neiltyson",
+      "Pontifex"
     ]
 
     @tweet_pairs = []
@@ -60,22 +63,13 @@ class TweetsController < ApplicationController
         "result_type" => "popular"
       })['statuses']
 
-      # if response_statuses.empty?
-      #   response_statuses = @user.search_tweets({
-      #     "q" => "to:#{handle}",
-      #     "count" => 100,
-      #     "since_id" => most_popular_id,
-      #     "result_type" => "mixed"
-      #   })['statuses']
-      # end
-
       most_popular_response = response_statuses.select do |status|
         status['in_reply_to_status_id'] == most_popular_id
       end.max_by do |status|
         status['favourites_count'] && status['retweet_count']
       end
 
-      # add conversation to array if there is a popular response
+      # add conversation if there is a popular response
       if most_popular_response
         pair << most_popular
         pair << most_popular_response
