@@ -1,0 +1,8 @@
+<div ng-app='app.mainApp' ng-controller='mainCtrl'>
+
+  <div class="item" ng-repeat="tweet in tweets" on-finish-render="ngRepeatFinished">
+    <blockquote class="twitter-tweet" data-lang="en" data-align="left" data-conversation="none">
+      <a ng-href="{{urls[$index]}}"></a>
+    </blockquote>
+  </div>
+</div>

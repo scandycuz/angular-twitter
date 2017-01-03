@@ -1,0 +1,10 @@
+I"ó(function() {
+  angular.module('app.mainApp').controller("mainCtrl", [
+    '$scope', function($scope, dataService) {
+      console.log('mainCtrl running');
+      return $scope.testValue = "Hello angular and rails";
+    }
+  ]);
+
+}).call(this);
+:ET

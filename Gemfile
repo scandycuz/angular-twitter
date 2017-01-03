@@ -47,3 +47,7 @@ end
 
 gem 'angular-rails-templates'
 gem 'bower-rails'
+
+gem 'oauth'
+
+gem 'json'
