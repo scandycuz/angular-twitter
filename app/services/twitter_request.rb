@@ -18,6 +18,7 @@ class TwitterRequest
     prominent_handles = [
       "realDonaldTrump",
       "PutinRF_Eng",
+      "ConanOBrien",
       "POTUS",
       "JerrySeinfeld",
       "Oprah",
