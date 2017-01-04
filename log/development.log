@@ -6528,3 +6528,14 @@ Started GET "/assets/angular-app/controllers/mainCtrl.self-9151b886f491d345ccc4f
 
 Started GET "/tweets.json" for 127.0.0.1 at 2017-01-03 19:58:09 -0800
 Processing by TweetsController#index as JSON
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.6ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.6ms)
+  Rendered tweets/index.json.jbuilder (20.4ms)
+Completed 200 OK in 13557ms (Views: 22.8ms | ActiveRecord: 0.0ms)
