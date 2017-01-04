@@ -48,6 +48,7 @@ class TwitterRequest
       most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(:created_at).limit(1)
 
       # get recent tweets
+      # if most recent tweet exists, search only for later tweets
       if most_recent_tweet.empty?
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
@@ -93,6 +94,7 @@ class TwitterRequest
         @first_user = User.create(user_params)
       end
 
+      # save first tweet params
       tweet_user_id = @first_user[:id]
       tweet_id_str = most_popular_tweet['id_str']
       tweet_text = most_popular_tweet['text']
@@ -102,9 +104,8 @@ class TwitterRequest
         text: tweet_text
       }
 
-      most_popular_tweet_id = most_popular_tweet['id']
-
       # find most popular response to tweet
+      most_popular_tweet_id = most_popular_tweet['id']
       response_statuses = @user.search_tweets({
         "q" => "to:#{handle}",
         "count" => 100,
@@ -120,10 +121,11 @@ class TwitterRequest
 
       next if !most_popular_response
 
-      # add first tweet to database
+      # initial tweet and popular response found,
+      # add initial tweet to database
       @first_tweet = Tweet.create(tweet_params)
 
-      # add second user to database if doesn't exist yet
+      # add response's user to database if doesn't exist yet
       user = most_popular_response['user']
       user_id_str = user['id_str']
       user_name = user['name']
@@ -147,6 +149,7 @@ class TwitterRequest
         @second_user = User.create(user_params)
       end
 
+      # add response tweet to database
       tweet_user_id = @second_user[:id]
       tweet_id_str = most_popular_response['id_str']
       tweet_text = most_popular_response['text']
