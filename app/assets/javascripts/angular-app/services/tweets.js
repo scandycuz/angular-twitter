@@ -2,7 +2,7 @@
 
 angular.module("app.mainApp")
 .service('dataService', function($http) {
-  this.helloConsole = () => {
+  this.helloConsole = function() {
     console.log('This is the hello console service!');
   };
 

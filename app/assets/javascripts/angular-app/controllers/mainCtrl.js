@@ -6,7 +6,7 @@ angular.module('app.mainApp')
       twttr.widgets.load();
     });
 
-    dataService.getTweets( (response) => {
+    dataService.getTweets( function(response) {
       $scope.tweets = response.data;
 
       var urls = [];
