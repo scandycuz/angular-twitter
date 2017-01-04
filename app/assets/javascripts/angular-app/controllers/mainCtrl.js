@@ -1,5 +1,5 @@
 angular.module('app.mainApp')
-.controller("mainCtrl", ["$scope", "dataService", function($scope, dataService) {
+.controller("mainCtrl", function($scope, dataService) {
     console.log('mainCtrl running');
 
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
@@ -22,5 +22,5 @@ angular.module('app.mainApp')
       console.log(urls);
       console.log($scope.tweets);
     });
-  }]
+  }
 );

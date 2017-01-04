@@ -53,3 +53,5 @@ gem 'oauth'
 gem 'json'
 
 gem 'pg'
+
+gem 'ngannotate-rails'

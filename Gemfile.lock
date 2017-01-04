@@ -79,6 +79,9 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.10.1)
     multi_json (1.12.1)
+    ngannotate-rails (1.2.2)
+      execjs
+      rails (>= 3.1)
     nokogiri (1.7.0)
       mini_portile2 (~> 2.1.0)
     oauth (0.5.1)
@@ -156,6 +159,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   json
+  ngannotate-rails
   oauth
   pg
   rails (= 4.2.4)

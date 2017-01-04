@@ -6689,3 +6689,82 @@ Processing by TweetsController#index as JSON
   Rendered tweets/_tweet_pairs.json.jbuilder (0.6ms)
   Rendered tweets/index.json.jbuilder (1.1ms)
 Completed 200 OK in 1243ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:25:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 153ms (Views: 152.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-app/directives/main.self-35c428eb27c9d1217507649fc5385e11c3b6cdd5051700ebec05772ad32bbea2.js?body=1" for 127.0.0.1 at 2017-01-03 20:25:43 -0800
+
+
+Started GET "/assets/angular-app/controllers/mainCtrl.self-30e32fc52a29fe387b6a6ddae7c428654967cb709ede4379a2f315fe742cab6f.js?body=1" for 127.0.0.1 at 2017-01-03 20:25:43 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:26:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 143ms (Views: 142.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-app/controllers/mainCtrl.self-f6fd89fb3bfd0c11a45236203d59acb4beefce6b71a0477ae6f4cc110fa41a2a.js?body=1" for 127.0.0.1 at 2017-01-03 20:26:04 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:26:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 142ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:26:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:26:37 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 473ms (Views: 472.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:27:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 143ms (Views: 142.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json" for 127.0.0.1 at 2017-01-03 20:27:09 -0800
+Processing by TweetsController#index as JSON
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.2ms)
+Completed 200 OK in 1259ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:28:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 152ms (Views: 152.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/angular-app/controllers/mainCtrl.self-fc7543a7e71203cb2c3559fd6c858bcd925f025bb7161562a387ddb087d31803.js?body=1" for 127.0.0.1 at 2017-01-03 20:28:03 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-03 20:29:55 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 17ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json" for 127.0.0.1 at 2017-01-03 20:29:55 -0800
+Processing by TweetsController#index as JSON
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.6ms)
+  Rendered tweets/index.json.jbuilder (1.1ms)
+Completed 200 OK in 1199ms (Views: 2.2ms | ActiveRecord: 0.0ms)
