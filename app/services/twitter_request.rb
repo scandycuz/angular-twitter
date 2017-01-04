@@ -1,3 +1,4 @@
+require 'twitter_api'
 
 class TwitterRequest
 
