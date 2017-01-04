@@ -17,6 +17,7 @@ class TwitterRequest
   def update_tweets
     prominent_handles = [
       "realDonaldTrump",
+      "RBReich",
       "PutinRF_Eng",
       "ConanOBrien",
       "POTUS",
