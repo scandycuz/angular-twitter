@@ -9,12 +9,12 @@ angular.module('app.mainApp')
     dataService.getTweets( (response) => {
       $scope.tweets = response.data;
 
-      let urls = [];
-      for (let i = 0; i < $scope.tweets.length; i++) {
-        let tweet = $scope.tweets[i];
-        let screenName = tweet.user.screen_name;
-        let tweetId = tweet.id_str;
-        let url = `https://twitter.com/${screenName}/status/${tweetId}`;
+      var urls = [];
+      for (var i = 0; i < $scope.tweets.length; i++) {
+        var tweet = $scope.tweets[i];
+        var screenName = tweet.user.screen_name;
+        var tweetId = tweet.id_str;
+        var url = "https://twitter.com/" + screenName + "/status/" + tweetId;
         urls.push(url);
       }
 
