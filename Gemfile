@@ -51,3 +51,5 @@ gem 'bower-rails'
 gem 'oauth'
 
 gem 'json'
+
+gem 'pg'

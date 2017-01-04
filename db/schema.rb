@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20170103183948) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "tweets", force: :cascade do |t|
     t.integer  "tweet_id",     null: false
     t.string   "text",         null: false
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20170103183948) do
     t.string   "tweet_id_str"
   end
 
-  add_index "tweets", ["tweet_id"], name: "index_tweets_on_tweet_id"
-  add_index "tweets", ["user_id"], name: "index_tweets_on_user_id"
+  add_index "tweets", ["tweet_id"], name: "index_tweets_on_tweet_id", using: :btree
+  add_index "tweets", ["user_id"], name: "index_tweets_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.integer  "twitter_id",        null: false
@@ -37,7 +40,7 @@ ActiveRecord::Schema.define(version: 20170103183948) do
     t.string   "screen_name"
   end
 
-  add_index "users", ["name"], name: "index_users_on_name"
-  add_index "users", ["twitter_id"], name: "index_users_on_twitter_id"
+  add_index "users", ["name"], name: "index_users_on_name", using: :btree
+  add_index "users", ["twitter_id"], name: "index_users_on_twitter_id", using: :btree
 
 end
