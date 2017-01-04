@@ -13,7 +13,7 @@ angular.module('app.mainApp')
       for (var i = 0; i < $scope.tweets.length; i++) {
         var tweet = $scope.tweets[i];
         var screenName = tweet.user.screen_name;
-        var tweetId = tweet.id_str;
+        var tweetId = tweet.tweet_id_str;
         var url = "https://twitter.com/" + screenName + "/status/" + tweetId;
         urls.push(url);
       }

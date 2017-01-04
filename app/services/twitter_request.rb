@@ -1,0 +1,165 @@
+
+class TwitterRequest
+
+  def initialize
+    @user = TwitterOAuth.new("5hVOERlpCYPJEQlwmDxPAdcNZ",
+   "uIu4ZAUkjhTQVUeJGoLfTEHcFzSBghqS4rUvrFgI3UvCWFHbwE",
+   "3278416747-tc3iajgag8G4FPm5pvG0AUPqLT2Zb8Jn7PRxKI8",
+   "JiwEFnYLmReXpazgieHmttL1whjDQEMbTNI4xMh5HJrx0")
+
+   @first_user
+   @second_user
+   @first_tweet
+   @second_tweet
+  end
+
+  def update_tweets
+    prominent_handles = [
+      "realDonaldTrump",
+      "PutinRF_Eng",
+      "POTUS",
+      "JerrySeinfeld",
+      "Oprah",
+      "KingJames",
+      "BillGates",
+      "KevinHart4real",
+      "CNN",
+      "kanyewest",
+      "danieltosh",
+      "emmawatson",
+      "NASA",
+      "Google",
+      "JimCarrey",
+      "NBCNews",
+      "Sethrogen",
+      "rickygervais",
+      "WilliamShatner",
+      "jack",
+      "LeoDiCaprio",
+      "neiltyson",
+      "Pontifex"
+    ]
+
+    # Find popular tweet and popular response for each handle
+    prominent_handles.each do |handle|
+
+      # get most recently used tweet for handle
+      most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(:created_at).limit(1)
+
+      # get recent tweets
+      if most_recent_tweet.empty?
+        tweets = @user.search_tweets({
+          "q" => "from:#{handle}",
+          "count" => 10
+        })['statuses']
+      else
+        most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i
+        tweets = @user.search_tweets({
+          "q" => "from:#{handle}",
+          "count" => 10,
+          "since_id" => most_recent_tweet_id
+        })['statuses']
+      end
+
+      next if tweets.empty?
+
+      # find most popular tweet
+      most_popular_tweet = tweets.max_by do |status|
+        status['favourites_count'] && status['retweet_count']
+      end
+
+      # save user in database if doesn't exist
+      user = most_popular_tweet['user']
+      user_id_str = user['id_str']
+      user_name = user['name']
+      user_screen_name = user['screen_name']
+      user_location = user['location']
+      user_description = user['description']
+      user_profile_image_url = user['profile_image_url']
+      user_params = {
+        user_id_str: user_id_str,
+        name: user_name,
+        screen_name: user_screen_name,
+        profile_image_url: user_profile_image_url,
+        description: user_description,
+        location: user_location
+      }
+
+      existing_user = User.find_by_screen_name(user_screen_name)
+      if existing_user
+        @first_user = existing_user
+      else
+        @first_user = User.create(user_params)
+      end
+
+      tweet_user_id = @first_user[:id]
+      tweet_id_str = most_popular_tweet['id_str']
+      tweet_text = most_popular_tweet['text']
+      tweet_params = {
+        user_id: tweet_user_id,
+        tweet_id_str: tweet_id_str,
+        text: tweet_text
+      }
+
+      most_popular_tweet_id = most_popular_tweet['id']
+
+      # find most popular response to tweet
+      response_statuses = @user.search_tweets({
+        "q" => "to:#{handle}",
+        "count" => 100,
+        "since_id" => most_popular_tweet_id,
+        "result_type" => "popular"
+      })['statuses']
+
+      most_popular_response = response_statuses.select do |status|
+        status['in_reply_to_status_id'] == most_popular_tweet_id
+      end.max_by do |status|
+        status['favourites_count'] && status['retweet_count']
+      end
+
+      next if !most_popular_response
+
+      # add first tweet to database
+      @first_tweet = Tweet.create(tweet_params)
+
+      # add second user to database if doesn't exist yet
+      user = most_popular_response['user']
+      user_id_str = user['id_str']
+      user_name = user['name']
+      user_screen_name = user['screen_name']
+      user_location = user['location']
+      user_description = user['description']
+      user_profile_image_url = user['profile_image_url']
+      user_params = {
+        user_id_str: user_id_str,
+        name: user_name,
+        screen_name: user_screen_name,
+        profile_image_url: user_profile_image_url,
+        description: user_description,
+        location: user_location
+      }
+
+      existing_user = User.find_by_screen_name(user_screen_name)
+      if existing_user
+        @second_user = existing_user
+      else
+        @second_user = User.create(user_params)
+      end
+
+      tweet_user_id = @second_user[:id]
+      tweet_id_str = most_popular_response['id_str']
+      tweet_text = most_popular_response['text']
+      initial_tweet_id = @first_tweet[:id]
+      tweet_params = {
+        user_id: tweet_user_id,
+        tweet_id_str: tweet_id_str,
+        text: tweet_text,
+        initial_tweet_id: initial_tweet_id
+      }
+
+      @second_tweet = Tweet.create(tweet_params)
+    end
+
+  end
+
+end
