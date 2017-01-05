@@ -1,4 +1,5 @@
-<div id="tweet-feed" ng-app='app.mainApp' ng-controller='mainCtrl' class='tweet-feed group'>
+
+<div id="tweet-feed" ng-app='app.mainApp' ng-controller='mainCtrl' class='tweet-feed group' ng-show="pageLoaded">
 
   <div class="item group" ng-repeat="tweet in tweets" on-finish-render="ngRepeatFinished" ng-show="$index % 2 == 0">
     <blockquote class="twitter-tweet" data-lang="en" data-align="left" data-conversation="none">
@@ -7,6 +8,15 @@
     <blockquote class="twitter-tweet" data-lang="en" data-align="right" data-conversation="none">
       <a ng-href="{{urls[$index + 1]}}"></a>
     </blockquote>
+  </div>
+
+  <div class="loading-container">
+    <div class="loading-container" ng-show="!loaded">
+      <%= image_tag('ajax-loader-blue.gif') %>
+    </div>
+    <div class="end-of-tweets" ng-show="noTweets">
+      <p>No more tweets</p>
+    </div>
   </div>
 
 </div>

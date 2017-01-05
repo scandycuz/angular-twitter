@@ -11,24 +11,33 @@ angular.module('app.mainApp')
       var existingTweets = $scope.tweets;
       var newTweets = response.data;
 
+      var urls = [];
       for (var i = 0; i < newTweets.length; i++) {
         var tweet = newTweets[i];
         var screenName = tweet.user.screen_name;
         var tweetId = tweet.tweet_id_str;
         var url = "https://twitter.com/" + screenName + "/status/" + tweetId;
-        $scope.urls.push(url);
+        urls.push(url);
       }
 
+      // return if no more tweets
+      if (!newTweets.length) {
+        return $scope.noTweets = true;
+      }
+
+      $scope.loaded = false;
+
+      $scope.urls = $scope.urls.concat(urls);
       $scope.tweets = existingTweets.concat(newTweets);
     }
 
     // load more tweets scroll event listener
     function loadOnScroll() {
-      if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - 60) {
+      var halfWindowHeight = $(window).height() / 4;
+      if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - halfWindowHeight) {
         $scope.loaded = true;
 
         window.setTimeout(function() {
-      		// actual callback
           dataService.getNextPage(appendNewTweets);
       	}, 400);
       }
@@ -39,7 +48,6 @@ angular.module('app.mainApp')
     // load twitter oembeds on load finish
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
       twttr.widgets.load();
-      $scope.loaded = false;
     });
 
     // get initial tweets
@@ -56,6 +64,7 @@ angular.module('app.mainApp')
       }
 
       $scope.urls = urls;
+      $scope.pageLoaded = true;
     });
 
   }
