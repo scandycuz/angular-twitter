@@ -47,7 +47,7 @@ class TwitterRequest
     prominent_handles.each do |handle|
 
       # get most recently used tweet for handle
-      most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(:created_at).limit(1)
+      most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(created_at: :desc).limit(1)
 
       # get recent tweets
       # if most recent tweet exists, search only for later tweets
@@ -72,7 +72,7 @@ class TwitterRequest
         status['favourites_count'] && status['retweet_count']
       end
 
-      # save user in database if doesn't exist
+      # save twitter user in database if doesn't exist
       user = most_popular_tweet['user']
       user_id_str = user['id_str']
       user_name = user['name']
