@@ -1,8 +1,12 @@
-<div ng-app='app.mainApp' ng-controller='mainCtrl' class='tweet-feed group'>
+<div id="tweet-feed" ng-app='app.mainApp' ng-controller='mainCtrl' class='tweet-feed group'>
 
-  <div class="item" ng-repeat="tweet in tweets" on-finish-render="ngRepeatFinished">
+  <div class="item group" ng-repeat="tweet in tweets" on-finish-render="ngRepeatFinished" ng-show="$index % 2 == 0">
     <blockquote class="twitter-tweet" data-lang="en" data-align="left" data-conversation="none">
       <a ng-href="{{urls[$index]}}"></a>
     </blockquote>
+    <blockquote class="twitter-tweet" data-lang="en" data-align="right" data-conversation="none">
+      <a ng-href="{{urls[$index + 1]}}"></a>
+    </blockquote>
   </div>
+
 </div>

@@ -5,7 +5,10 @@ class TweetsController < ApplicationController
 
   def index
     # get initial tweets
-    tweets = Tweet.includes(:response, :user).where('tweets.initial_tweet_id IS NULL').order(created_at: :desc)
+    tweets = Tweet.includes(:response, :user)
+    .where('tweets.initial_tweet_id IS NULL')
+    .paginate(page: params[:page], per_page: 3)
+    .order(created_at: :desc)
 
     # pair initial tweets with their response
     @tweet_pairs = []

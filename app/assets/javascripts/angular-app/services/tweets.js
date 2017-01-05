@@ -2,13 +2,23 @@
 
 angular.module("app.mainApp")
 .service('dataService', function($http) {
-  this.helloConsole = function() {
-    console.log('This is the hello console service!');
-  };
+  this.pageNum = 1;
 
   this.getTweets = function(callback) {
-    $http.get('/tweets.json')
+    $http.get('/tweets.json?page=' + this.pageNum)
     .then(callback);
   };
+
+  this.getNextPage = function(callback) {
+    this.pageNum ++;
+    $http.get('/tweets.json?page=' + this.pageNum)
+    .then( function(response) {
+      if (!response.data.length) {
+        this.pageNum --;
+      }
+      return response;
+    }.bind(this))
+    .then(callback);
+  }
 
 });

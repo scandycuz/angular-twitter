@@ -55,3 +55,7 @@ gem 'json'
 gem 'pg'
 
 gem 'ngannotate-rails'
+
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'api-pagination'
