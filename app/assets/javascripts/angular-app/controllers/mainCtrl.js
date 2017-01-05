@@ -33,8 +33,8 @@ angular.module('app.mainApp')
 
     // load more tweets scroll event listener
     function loadOnScroll() {
-      var halfWindowHeight = $(window).height() / 4;
-      if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - halfWindowHeight) {
+      var scrollOffset = $(window).height() / 2;
+      if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - scrollOffset) {
         $scope.loaded = true;
 
         window.setTimeout(function() {

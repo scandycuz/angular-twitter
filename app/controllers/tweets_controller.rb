@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
     # get initial tweets
     tweets = Tweet.includes(:response, :user)
     .where('tweets.initial_tweet_id IS NULL')
-    .paginate(page: params[:page], per_page: 5)
+    .paginate(page: params[:page], per_page: 3)
     .order(created_at: :desc)
 
     # pair initial tweets with their response
