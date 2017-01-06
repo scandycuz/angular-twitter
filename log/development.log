@@ -59892,3 +59892,230 @@ Processing by TweetsController#index as JSON
   Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
   Rendered tweets/index.json.jbuilder (4.7ms)
 Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 22:10:21 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 22:10:21 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (72, 66, 64)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 56]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.9ms)
+Completed 200 OK in 22ms (Views: 5.8ms | ActiveRecord: 3.0ms)
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'realDonaldTrump') LIMIT 1) subquery_for_count[0m
+  [1m[35mTweet Load (0.5ms)[0m  SELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'realDonaldTrump')  ORDER BY "tweets"."created_at" DESC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'RBReich') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "RBReich"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'PutinRF_Eng') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "PutinRF_Eng"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'ConanOBrien') LIMIT 1) subquery_for_count[0m
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'ConanOBrien')  ORDER BY "tweets"."created_at" DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "ConanOBrien"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'POTUS') LIMIT 1) subquery_for_count
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'POTUS')  ORDER BY "tweets"."created_at" DESC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'JerrySeinfeld') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "JerrySeinfeld"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Oprah') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "Oprah"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'KingJames') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "KingJames"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'BillGates') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "BillGates"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'KevinHart4real') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "KevinHart4real"]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Trevornoah') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "Trevornoah"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'CNN') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "CNN"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'StephenAtHome') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "StephenAtHome"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'kanyewest') LIMIT 1) subquery_for_count
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'kanyewest')  ORDER BY "tweets"."created_at" DESC LIMIT 1[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'danieltosh') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "danieltosh"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'emmawatson') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "EmmaWatson"]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'NASA') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "NASA"]]
+  [1m[35m (1.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Google') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "Google"]]
+  [1m[35m (1.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'JimCarrey') LIMIT 1) subquery_for_count
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'NBCNews') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "NBCNews"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Sethrogen') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "Sethrogen"]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'rickygervais') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "rickygervais"]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'WilliamShatner') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "WilliamShatner"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'jack') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "jack"]]
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'LeoDiCaprio') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "LeoDiCaprio"]]
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'neiltyson') LIMIT 1) subquery_for_count[0m
+  [1m[35mTweet Load (1.0ms)[0m  SELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'neiltyson')  ORDER BY "tweets"."created_at" DESC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Pontifex') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "Pontifex"]]
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'elizabethforma') LIMIT 1) subquery_for_count[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'danaperino') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "DanaPerino"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'DanaPerino' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "27311044"], ["name", "Dana Perino"], ["screen_name", "DanaPerino"], ["profile_image_url", "http://pbs.twimg.com/profile_images/816300697708855296/QJNTY8q7_normal.jpg"], ["description", "Fox News contributor, co-host The Five, Author And the Good News Is...Fmr Press Sec to George W. Bush. Speaking opps through: https://t.co/CFMLjA5vL3"], ["location", "New York, NY"], ["created_at", "2017-01-06 06:10:56.225052"], ["updated_at", "2017-01-06 06:10:56.225052"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'NateSilver538') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "NateSilver538"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'NateSilver538' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "16017475"], ["name", "Nate Silver"], ["screen_name", "NateSilver538"], ["profile_image_url", "http://pbs.twimg.com/profile_images/668814368008708096/5HABV7bJ_normal.png"], ["description", "Editor-in-Chief, @FiveThirtyEight. Author, The Signal and the Noise (https://t.co/EYTxvN6BLY). Sports/politics/food geek."], ["location", "New York"], ["created_at", "2017-01-06 06:10:56.940185"], ["updated_at", "2017-01-06 06:10:56.940185"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'jaketapper') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "jaketapper"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'jaketapper' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "14529929"], ["name", "Jake Tapper"], ["screen_name", "jaketapper"], ["profile_image_url", "http://pbs.twimg.com/profile_images/416044148425502720/FRKCS5pH_normal.jpeg"], ["description", "CNN Anchor of @TheLeadCNN and @CNNSOTU and Chief Washington Correspondent; author of The Outpost: An Untold Story of American Valor. RTs do not = endorsement."], ["location", ""], ["created_at", "2017-01-06 06:10:57.607618"], ["updated_at", "2017-01-06 06:10:57.607618"]]
+  [1m[36m (2.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'buzzfeedben') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "BuzzFeedBen"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'BuzzFeedBen' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "9532402"], ["name", "Ben Smith"], ["screen_name", "BuzzFeedBen"], ["profile_image_url", "http://pbs.twimg.com/profile_images/796943496896598017/JQkrePn4_normal.jpg"], ["description", "BuzzFeed Editor-in-Chief. Beats working for a living. Email or gchat ben@buzzfeed.com. AIM benobserver. PGP: 3DB3 BF94 407C 26D0 789E D5F4 E71F F1F5 D826 3929"], ["location", "Brooklyn, NY"], ["created_at", "2017-01-06 06:11:03.179425"], ["updated_at", "2017-01-06 06:11:03.179425"]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'billmaher') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "billmaher"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'billmaher' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "19697415"], ["name", "Bill Maher"], ["screen_name", "billmaher"], ["profile_image_url", "http://pbs.twimg.com/profile_images/807005716972072960/UV8lfUHC_normal.jpg"], ["description", "The Official Bill Maher Twitter"], ["location", "Los Angeles"], ["created_at", "2017-01-06 06:11:03.921370"], ["updated_at", "2017-01-06 06:11:03.921370"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'mollyesque') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "mollyesque"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'mollyesque' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "130945778"], ["name", "Molly Ball"], ["screen_name", "mollyesque"], ["profile_image_url", "http://pbs.twimg.com/profile_images/685111861096902656/LOmgZHVv_normal.jpg"], ["description", "Politics writer for The Atlantic. I'm not going to argue with you on Twitter. molly@theatlantic.com"], ["location", "Washington, D.C."], ["created_at", "2017-01-06 06:11:04.514739"], ["updated_at", "2017-01-06 06:11:04.514739"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'JohnDingell') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "JohnDingell"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'JohnDingell' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "109025212"], ["name", "John Dingell"], ["screen_name", "JohnDingell"], ["profile_image_url", "http://pbs.twimg.com/profile_images/751796404864122880/jiPHasvn_normal.jpg"], ["description", "Former Congressman from Michigan's 12th District. @RepDebDingell's husband. Fan of @umich and all things Detroit."], ["location", "Southeast Michigan"], ["created_at", "2017-01-06 06:11:05.375736"], ["updated_at", "2017-01-06 06:11:05.375736"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'davidafrench') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "DavidAFrench"]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'DavidAFrench' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "240107748"], ["name", "David French"], ["screen_name", "DavidAFrench"], ["profile_image_url", "http://pbs.twimg.com/profile_images/793838121460858880/4ShJ2iNo_normal.jpg"], ["description", "Senior Fellow, National Review Institute, Writer at National Review, lawyer, bestselling author, veteran of Operation Iraqi Freedom. Married to @NancyAFrench"], ["location", ""], ["created_at", "2017-01-06 06:11:06.041925"], ["updated_at", "2017-01-06 06:11:06.041925"]]
+  [1m[36m (2.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'elonjames') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "elonjames"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'elonjames' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "1716581"], ["name", "Elon James White"], ["screen_name", "elonjames"], ["profile_image_url", "http://pbs.twimg.com/profile_images/813647567468843008/A8sE6RZA_normal.jpg"], ["description", "Host, @TWIBprime @FreespeechTV (Mon-Thurs 9pm E/6pm P) CEO, @TWIBnation. Media Dir, @netroots_nation. Writer, Performer, Problematic Negro.  ejw.biz@twib.me"], ["location", "Oakland, CA"], ["created_at", "2017-01-06 06:11:06.622578"], ["updated_at", "2017-01-06 06:11:06.622578"]]
+  [1m[36m (2.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'benpolitico') LIMIT 1) subquery_for_count
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'AlanColmes') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "AlanColmes"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'AlanColmes' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id_str", "14924233"], ["name", "Alan Colmes"], ["screen_name", "AlanColmes"], ["profile_image_url", "http://pbs.twimg.com/profile_images/630084927246221312/AALITxY8_normal.jpg"], ["description", "Host of Alan Colmes Show on radio, Fox News contributor"], ["location", "New York"], ["created_at", "2017-01-06 06:11:07.480857"], ["updated_at", "2017-01-06 06:11:07.480857"]]
+  [1m[35m (2.5ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'MysteryPollster') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "MysteryPollster"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'MysteryPollster' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id_str", "11731322"], ["name", "Mark Blumenthal"], ["screen_name", "MysteryPollster"], ["profile_image_url", "http://pbs.twimg.com/profile_images/764218709527240704/Uch-vnTL_normal.jpg"], ["description", "Head of Election Polling for SurveyMonkey. Husband. Father. Cyclist. Formerly: Huffington Post, https://t.co/FFguVAUHdQ, political consultant (D)."], ["location", "Washington, DC"], ["created_at", "2017-01-06 06:11:08.241094"], ["updated_at", "2017-01-06 06:11:08.241094"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'RasmussenPoll') LIMIT 1) subquery_for_count[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 22:11:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 22:11:13 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (72, 66, 64)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 56]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/tweets.json?page=2" for 127.0.0.1 at 2017-01-05 22:11:15 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"2"}
+  [1m[36mTweet Load (0.6ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 3[0m
+  [1m[35mTweet Load (0.5ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (62, 60, 58)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (22, 32, 25)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.2ms)
+  Rendered tweets/index.json.jbuilder (9.1ms)
+Completed 200 OK in 19ms (Views: 10.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/tweets.json?page=3" for 127.0.0.1 at 2017-01-05 22:11:20 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"3"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 6
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (56)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (22)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (1.6ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/tweets.json?page=4" for 127.0.0.1 at 2017-01-05 22:11:21 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"4"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 9
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.4ms)
