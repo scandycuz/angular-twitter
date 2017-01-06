@@ -56,7 +56,7 @@ class TwitterRequest
       if most_recent_tweet.empty?
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
-          "count" => 100
+          "count" => 10
         })['statuses']
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i
