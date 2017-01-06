@@ -10,8 +10,9 @@ $dark_twitter: #0084b4;
 $grey: #5c5c5c;
 $light_grey: #777;
 $very_light_grey: #d7d7d7;
-$header_grey: #bbb;
+$header_grey: #aaa;
 $dark_white: #fdfdfd;
+$red: #F01846;
 
 // fonts
 $work_sans: 'Work Sans', sans-serif;
@@ -23,7 +24,10 @@ body {
   margin: 0;
   padding-bottom: 15px;
 }
-
+a {
+  text-decoration: none;
+  color: inherit;
+}
 h1 {
   font-family: $work_sans;
   font-size: 1.5em;
@@ -71,6 +75,11 @@ ul {
       flex-direction: row;
     }
   }
+  img {
+    opacity: 0.85;
+    width: 39px;
+    margin: 0;
+  }
 }
 
 .author-menu {
@@ -104,6 +113,7 @@ ul {
 }
 .header-logo {
   justify-content: center;
+
 }
 .header-share {
   justify-content: center;
