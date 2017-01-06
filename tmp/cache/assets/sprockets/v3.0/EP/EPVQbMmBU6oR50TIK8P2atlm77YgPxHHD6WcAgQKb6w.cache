@@ -1,0 +1,11 @@
+I"(function() {
+  this.MainApp = angular.module('app.mainApp', []).run(function() {
+    return console.log('mainApp running');
+  });
+
+  this.info = angular.module('app.info', []).run(function() {
+    return console.log('infoApp running');
+  });
+
+}).call(this);
+:ET

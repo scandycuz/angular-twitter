@@ -4,6 +4,55 @@ angular.module('app.mainApp')
 
     $scope.loaded = false;
 
+    // if (!localStorage.hideBanner) {
+      $('.info-header').removeClass('hidden');
+    // } else {
+      // $('about-link').removeClass('hidden');
+    // }
+
+    $('.about-link a').click(function(e) {
+      e.preventDefault();
+      $('.info-header').toggle();
+      $(window).on('scroll', removeBanner);
+    })
+
+    // remove info banner on scroll or close
+    function closeBanner() {
+      var $banner = $('.info-header');
+      var $htmlContent = $('.info-header p');
+      var $closeButton = $('.info-header i');
+      $(window).off('scroll', removeBanner);
+      $banner.slideUp();
+      $closeButton.animate({
+        opacity: 0.25,
+        marginTop: "-=280"
+      }, 600);
+      $htmlContent.animate({
+        opacity: 0.25,
+        marginTop: "-=280"
+      }, 600, function() {
+        localStorage.hideBanner = true;
+        // $('.about-link').removeClass('hidden');
+        $closeButton.animate({
+          opacity: 1,
+          marginTop: "+=280"
+        }, 600);
+        $htmlContent.animate({
+          opacity: 1,
+          marginTop: "+=280"
+        }, 600);
+      });
+    }
+    function removeBanner() {
+      var $banner = $('.info-header');
+      var $htmlContent = $('.info-header p');
+      if ($(window).scrollTop() > 40) {
+        closeBanner();
+      }
+    }
+    $(window).on('scroll', removeBanner);
+    $('.info-header i').on('click', closeBanner);
+
     // load more tweets callback
     function appendNewTweets(response) {
       if (response === null) { return; }
@@ -33,6 +82,7 @@ angular.module('app.mainApp')
 
     // load more tweets scroll event listener
     function loadOnScroll() {
+
       var scrollOffset = $(window).height() / 2;
       if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - scrollOffset) {
         $scope.loaded = true;
@@ -47,7 +97,9 @@ angular.module('app.mainApp')
 
     // load twitter oembeds on load finish
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-      twttr.widgets.load();
+      if (twttr.widgets) {
+        twttr.widgets.load();
+      }
     });
 
     // get initial tweets

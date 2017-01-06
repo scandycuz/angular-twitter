@@ -1,0 +1,200 @@
+// Place all the styles related to the StaticPagesController controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// colors
+$light_blue: #E9EBEE;
+$light_twitter_blue: #F5F8FA;
+$twitter: #00aced;
+$dark_twitter: #0084b4;
+$grey: #5c5c5c;
+$light_grey: #777;
+$very_light_grey: #d7d7d7;
+$header_grey: #bbb;
+$dark_white: #fdfdfd;
+
+// fonts
+$work_sans: 'Work Sans', sans-serif;
+$open_sans: 'Open Sans', sans-serif;
+
+body {
+  background: $light_blue;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-family: $work_sans;
+  font-size: 1.5em;
+  color: $header_grey;
+  text-transform: uppercase;
+}
+.author-menu {
+  font-family: $open_sans;
+}
+
+.alt {
+  color: $twitter;
+}
+.light {
+  font-weight: 300;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  .dropdown-container {
+    position: relative;
+  }
+  .dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+  }
+}
+
+.header {
+  background: white;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid $very_light_grey;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    > div {
+      width: 33.333%;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+}
+
+.author-menu {
+  text-align: right;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  li {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    color: $light_grey;
+    font-size: 15px;
+  }
+  .author-name {
+    font-size: 14px;
+  }
+  a {
+    color: $light_grey;
+  }
+  i {
+    cursor: pointer;
+    &:hover {
+      color: $twitter;
+    }
+  }
+}
+.header-author {
+  align-content: flex-end;
+}
+.header-logo {
+  justify-content: center;
+}
+.header-share {
+  justify-content: center;
+  a {
+    color: $light_grey;
+  }
+  i {
+    margin: 0 12px;
+    color: $light_grey;
+    cursor: pointer;
+    &:hover {
+      color: $twitter;
+    }
+  }
+}
+.about-link {
+  &.hidden {
+    display: none !important;
+  }
+  a {
+    &:hover {
+      color: $twitter;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1010px;
+  margin: 0 auto;
+}
+
+.info-header {
+  width: 100%;
+  background: $light_twitter_blue;
+  margin-bottom: 5px;
+  &.hidden {
+    display: none;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    width: 620px;
+    padding: 2em 10px;
+    color: $grey;
+  }
+  i {
+    opacity: 0.8;
+    cursor: pointer;
+    &:hover {
+      color: $twitter;
+    }
+  }
+  p {
+    margin: 0;
+    font-family: $open_sans;
+    text-align: left;
+    padding-right: 2em;
+    font-size: 16px;
+  }
+}
+
+.tweet-feed {
+  width: 620px;
+  margin: 0 auto;
+  &.padding {
+    padding-bottom: 120px;
+  }
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.loading-container {
+  height: 120px;
+  display: block;
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+}
+.end-of-tweets {
+  font-family: $open_sans;
+  font-weight: 300;
+  color: $light_grey;
+  font-size: 16px;
+}
