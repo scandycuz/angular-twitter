@@ -56840,3 +56840,3055 @@ Processing by TweetsController#index as JSON
   [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
   Rendered tweets/index.json.jbuilder (0.1ms)
 Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 20:34:38 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (223.5ms)
+Completed 200 OK in 276ms (Views: 275.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 20:34:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 20:34:39 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (1.5ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (70, 66, 64)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 55]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (8.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.6ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/index.json.jbuilder (21.6ms)
+Completed 200 OK in 94ms (Views: 23.7ms | ActiveRecord: 7.8ms)
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets"  ORDER BY "tweets"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 71]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets"  ORDER BY "tweets"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "tweets" WHERE "tweets"."id" = $1[0m  [["id", 70]]
+  [1m[35m (1.5ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 20:35:22 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 20:35:22 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/index.json.jbuilder (6.1ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tweets.json?page=2" for 127.0.0.1 at 2017-01-05 20:35:26 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"2"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 3
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (60, 58, 56)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (32, 25, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tweets.json?page=3" for 127.0.0.1 at 2017-01-05 20:35:27 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"3"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 6[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/index.json.jbuilder (0.1ms)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 20:55:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 20:55:28 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.6ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:04:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 60ms (Views: 59.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-9668279bb22e40a4095c9645af73a9c2c22ac679778f3f73fb75a9f690bde7c5.css?body=1" for 127.0.0.1 at 2017-01-05 21:04:26 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:04:26 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:05:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-c1daffb47cbd0dcc423919200ecebb3a161d074fe5739fe15d7340a8c6528df4.css?body=1" for 127.0.0.1 at 2017-01-05 21:05:00 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:05:00 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.9ms)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:05:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:05:01 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:05:19 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-ab56f734905765674c94fe275622dfba84ae7feb613376fe7ffebc8adbc9f63b.css?body=1" for 127.0.0.1 at 2017-01-05 21:05:19 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:05:19 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/index.json.jbuilder (8.1ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:06:03 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-5c8f60b6de94aa9f6a5252d31d2a2aa56cd3df34ee2a94c0a429f1f47d7e121c.css?body=1" for 127.0.0.1 at 2017-01-05 21:06:03 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:06:03 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:06:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-5b690c0f05c484f80ea723ee1cabf7676da81d1d79c2e2aa2eb674044c15e474.css?body=1" for 127.0.0.1 at 2017-01-05 21:06:23 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:06:23 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.2ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:09:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-c851d6c321775fc795a7f5364e9a3ed834ae0b077db033f9881b0800bd69a593.css?body=1" for 127.0.0.1 at 2017-01-05 21:09:02 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:09:02 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:09:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-5d1fed7ff43cd805c92255c109c134678a179dcad48576719634a3462d6f15ab.css?body=1" for 127.0.0.1 at 2017-01-05 21:09:38 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:09:38 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:09:56 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-d59f993024e5a0c89e3ab4977787d0373b808ba1cf6b31027a893aba993f281c.css?body=1" for 127.0.0.1 at 2017-01-05 21:09:56 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:09:56 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:10:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:10:26 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (1.6ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 12ms (Views: 5.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:11:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-d9388c88725bbdc4d0a9ce564758bbbcf5b29473e4060c145ed8e454ac05d32d.css?body=1" for 127.0.0.1 at 2017-01-05 21:11:01 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:11:01 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (6.0ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:12:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-7ed504f3be03ec1adbf2b0046fb75bc665209361cd59bbd09ef355eceb008442.css?body=1" for 127.0.0.1 at 2017-01-05 21:12:07 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:12:07 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.1ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:12:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:12:07 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.5ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:15:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-7178384141a2233b41937a266c7bf40f2ee3e010affc6507dd1ca14f0cc66a78.css?body=1" for 127.0.0.1 at 2017-01-05 21:15:47 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:15:47 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.5ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/index.json.jbuilder (8.1ms)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:16:17 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-af7aaa2e3daa32a068995906ddc6c7fc3b79d0986a5d9f32b7c7bc49cf04daec.css?body=1" for 127.0.0.1 at 2017-01-05 21:16:17 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:16:17 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.5ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:17:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-763c369fecf3c0affec8cb857ef5394efe699ff4751b2e7e37974dd0294be7fe.css?body=1" for 127.0.0.1 at 2017-01-05 21:17:18 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:17:18 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/index.json.jbuilder (4.2ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:17:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-a5330007c809c5d3befa731e5951f131109316d5b741878559e519f92e8e76b2.css?body=1" for 127.0.0.1 at 2017-01-05 21:17:31 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:17:31 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/index.json.jbuilder (8.7ms)
+Completed 200 OK in 16ms (Views: 9.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:17:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-ca4c10bc9fd11370a30cf57e28ae1c63dcf85fdf9678149157263d0ba77e7c61.css?body=1" for 127.0.0.1 at 2017-01-05 21:17:54 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:17:54 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.3ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:18:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-777bea67c30b4e9c78ae37f802c6a0eacfd66a238281ec23ea034bbad30132a0.css?body=1" for 127.0.0.1 at 2017-01-05 21:18:12 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:18:12 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:18:31 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-fbacd82320ae6a13e2c717b0b4c003123cc34d673a1d0d930598c683139620d1.css?body=1" for 127.0.0.1 at 2017-01-05 21:18:31 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:18:31 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/index.json.jbuilder (6.7ms)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:19:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-3fa8599fc2fa35e67acf85c5d2cd7a35588ea80b9bc308052cd6dbf6f15e2031.css?body=1" for 127.0.0.1 at 2017-01-05 21:19:35 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:19:35 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:19:36 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:19:36 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/index.json.jbuilder (6.9ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:19:52 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 40.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-080620f3413ff5bfc524293885a34c1a626d1b1f20e5f2613a42f03bc061dd17.css?body=1" for 127.0.0.1 at 2017-01-05 21:19:52 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:19:52 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.5ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:20:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 41ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-3e5324cbcddc1446acfe8aa7ad0013ed627f2423bd332678034aea44b7190b65.css?body=1" for 127.0.0.1 at 2017-01-05 21:20:07 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:20:07 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (6.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (9.5ms)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:20:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:20:27 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.2ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:21:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-158d585f42a437a4636ce38440c6c0957e7e7a06efbfb90dc01bbcc063d30014.css?body=1" for 127.0.0.1 at 2017-01-05 21:21:44 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:21:44 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.8ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:22:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-51bc8613a8a93ffda5699d8b4d748d56dba0c622fbceb233db4108b70bb25d9e.css?body=1" for 127.0.0.1 at 2017-01-05 21:22:45 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:22:46 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.6ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:23:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:23:08 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.9ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:23:57 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:23:58 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/index.json.jbuilder (7.5ms)
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:24:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-2ad6518ab2eea454295c18e46a25e1fc281fe90a1569ffe5d019f14971a3ae08.css?body=1" for 127.0.0.1 at 2017-01-05 21:24:40 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:24:40 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:25:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:25:09 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:26:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:26:34 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:26:45 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 12ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:26:45 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/index.json.jbuilder (4.2ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:27:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-4c0326e8b7c1e188e5ccbba82fa9a527d986f56af9440b50c7c3104740fa7941.css?body=1" for 127.0.0.1 at 2017-01-05 21:27:16 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:27:16 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.3ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:27:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-9e20a06d6e3288f93ffcc98913af4d1738152a79ad81ee02192491cb54a2b0f6.css?body=1" for 127.0.0.1 at 2017-01-05 21:27:41 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:27:41 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.3ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:27:49 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:27:49 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (6.2ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:28:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:28:04 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 12ms (Views: 6.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:29:51 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 15ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:29:51 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (4.9ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:30:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:30:01 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:30:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-3c291fa6f54ca7f809f4b16c42403f13105da0443e6dc163f5dcffaaeb5b19bb.css?body=1" for 127.0.0.1 at 2017-01-05 21:30:28 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:30:28 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.3ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:31:47 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-db9e7643f5b93290f2d13eeb3528c18a727177a3bc5b78f03036c2a6093984b2.css?body=1" for 127.0.0.1 at 2017-01-05 21:31:47 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:31:47 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.1ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:32:28 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Undefined variable: "$d2d2d2".):
+    2: <html>
+    3: <head>
+    4:   <title>TwitterApp</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600|Work+Sans:400,700,800,900"
+    7:     rel="stylesheet">
+    8:   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+  app/assets/stylesheets/static_pages_controller.scss:11
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___993706199__663149848'
+
+
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:32:38 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 50ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-675c3f03c9ea7003e7add7a79d21b1faf3bbb32df3d055f4b5e002e953e8a883.css?body=1" for 127.0.0.1 at 2017-01-05 21:32:38 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:32:38 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.5ms)
+  Rendered tweets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:32:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 46ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-0d2b76be352b67053a2ad6b390a58f52500d97a3ce9b3ba7171f5f12b342c85d.css?body=1" for 127.0.0.1 at 2017-01-05 21:32:46 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:32:46 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:33:46 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-8427771548596dd90c5ece2f4f3e3a6caacf68d3a0397de0099511e32b84c5ea.css?body=1" for 127.0.0.1 at 2017-01-05 21:33:46 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:33:46 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/index.json.jbuilder (7.2ms)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:34:16 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-42796f3251d27eacf42f8f2857cff08871093b6f56da01adab2e19d3911dc77e.css?body=1" for 127.0.0.1 at 2017-01-05 21:34:16 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:34:16 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.8ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:35:07 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-a8f944e23fef509209d44463287ad46713e8fb7a08495aa0762375dcb2cc6d6a.css?body=1" for 127.0.0.1 at 2017-01-05 21:35:07 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:35:07 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.3ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:35:20 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-1b6fed182a9dd78a8fae85a3d500bbb9592a16e769b51b4b7ae61736b44e367c.css?body=1" for 127.0.0.1 at 2017-01-05 21:35:20 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:35:20 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.2ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:35:26 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:35:26 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:36:00 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-be2938e9eda85e859df932394e9f761fabe1384178ca1901c9ddf37ee9af0e98.css?body=1" for 127.0.0.1 at 2017-01-05 21:36:00 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:36:01 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (6.1ms)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:36:09 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-4c183a07fbd584854adf4da0baffe42bd86e5841273f03974a0290d7788ec424.css?body=1" for 127.0.0.1 at 2017-01-05 21:36:09 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:36:09 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:36:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 47ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-1e7400ffbb71618f9cbb84f55dc5a27f331f59571a18be1b41bbd8fbe8578a49.css?body=1" for 127.0.0.1 at 2017-01-05 21:36:50 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:36:50 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:37:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-a2ebc973fd64f26eaf1ade1ec27f2b59c339b17213a7fddb1115428877a8f0e2.css?body=1" for 127.0.0.1 at 2017-01-05 21:37:05 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:37:06 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/index.json.jbuilder (5.6ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:37:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-e116b7aac15ed90ea81534dfdd72d7cb7aa9dfed241b4ffe4bb8f6dae3791653.css?body=1" for 127.0.0.1 at 2017-01-05 21:37:40 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:37:40 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/index.json.jbuilder (8.4ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:37:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-9b32d1065ee75386f4af612bbca0686b053f76b605dd640a0e79b00ff79589d6.css?body=1" for 127.0.0.1 at 2017-01-05 21:37:59 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:37:59 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:38:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 50ms (Views: 50.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-ec33560fdd92693e6f2c3655cfea0012c59e01a9b73e52d464c3938df3be091f.css?body=1" for 127.0.0.1 at 2017-01-05 21:38:53 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:38:53 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.9ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:39:05 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 49ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-97d6936e3da4787c90c60d477519dead134f24ffd419851ada75ca4b122f5022.css?body=1" for 127.0.0.1 at 2017-01-05 21:39:05 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:39:05 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:39:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-09ffdba1a11d8f752d6d59984f6a86d5ca5f80e4e1c14076120f8e178180caa6.css?body=1" for 127.0.0.1 at 2017-01-05 21:39:18 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:39:18 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/index.json.jbuilder (4.4ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:39:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-2b594ce241617fb876c490e850efb44bf1600605bee505facfcd6863bd5c22c7.css?body=1" for 127.0.0.1 at 2017-01-05 21:39:27 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:39:27 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/index.json.jbuilder (7.5ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:39:40 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-d56f18792346c199f95618c593a909d253a7535170bcfacd7a1e6646bafccc87.css?body=1" for 127.0.0.1 at 2017-01-05 21:39:40 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:39:40 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (5.7ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:39:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-95da4b570acf2682f9fe3a5c6474a593c13d86a6d32db8904443a554f6714276.css?body=1" for 127.0.0.1 at 2017-01-05 21:39:53 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:39:53 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:40:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:40:43 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.6ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 11ms (Views: 5.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:41:01 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:41:02 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.8ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/index.json.jbuilder (7.5ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:41:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:41:13 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (0.9ms)
+  Rendered tweets/index.json.jbuilder (4.6ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:42:41 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:42:41 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (6.1ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:43:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:43:05 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.1ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:43:12 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:43:13 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.9ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:43:29 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-3639a90e7dfc61024d849466fc829b9b6c86a4f6daa893da8e408367ab8c4b99.css?body=1" for 127.0.0.1 at 2017-01-05 21:43:29 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:43:29 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:43:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-4e9755bf9b1571200a62cedb9698dbb6722773ac380f4b3afbeaabef76da9e1f.css?body=1" for 127.0.0.1 at 2017-01-05 21:43:35 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:43:36 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:44:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 61ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-2915dd551f28490046f266870d2a33eae1527e53c37dd7c4250c2c6f8e63e240.css?body=1" for 127.0.0.1 at 2017-01-05 21:44:27 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:44:27 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (9.9ms)
+Completed 200 OK in 15ms (Views: 10.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:44:34 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:44:34 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/index.json.jbuilder (7.1ms)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:44:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-72c777fbc47e74ad914eb42e30868bbdf89e58a35e62655c75e2c7fe564a721a.css?body=1" for 127.0.0.1 at 2017-01-05 21:44:44 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:44:44 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:44:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 48ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-0e73c9184e7f58bc408447d0a3cadc57280533f035544e4e75e858eeeebac729.css?body=1" for 127.0.0.1 at 2017-01-05 21:44:54 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:44:54 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.9ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:47:54 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-fc076e25a068b2ab0c2b36f7205a24a597bb1b236fba8338c03d8bd800ff6ca8.css?body=1" for 127.0.0.1 at 2017-01-05 21:47:54 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:47:54 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.1ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:48:04 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-2635998af1b70843aba1c48913825e7fbfbfa7cadc753f368a9a4f2edf9a2b92.css?body=1" for 127.0.0.1 at 2017-01-05 21:48:04 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:48:04 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.5ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:49:06 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 51ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-28d78c0ee2a826fa5da1d147fa8163a9ef1cf77feedf7f733be0a58e3e0d3cce.css?body=1" for 127.0.0.1 at 2017-01-05 21:49:06 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:49:06 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:49:50 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 54ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-3d08b01205f43ae1520092d775f0841c1e71b8868bfd1742e348e965c1282236.css?body=1" for 127.0.0.1 at 2017-01-05 21:49:50 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:49:50 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.9ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.7ms)
+  Rendered tweets/index.json.jbuilder (7.4ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:49:59 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 57ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-bbfc3a89aa016b6e831086f43ca692b4da7c3091a703055517b06f5883ed9eef.css?body=1" for 127.0.0.1 at 2017-01-05 21:49:59 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:49:59 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:50:15 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:50:15 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.6ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.1ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:50:39 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 52ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-e0e704faa945cdac55f1ef0a6a9d7e7ef826d863a10091a4d1dc2e5b4934ce9b.css?body=1" for 127.0.0.1 at 2017-01-05 21:50:39 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:50:39 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:50:43 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 51ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-3908691ffbe56e59c8b6f7af91531bb83cf13974164f7c4fc021c8d101302aea.css?body=1" for 127.0.0.1 at 2017-01-05 21:50:43 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:50:43 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.3ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:51:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-dde27288ec7f7d887e5912c200c33dc08b654cc8c44f4d76a232b7348639f461.css?body=1" for 127.0.0.1 at 2017-01-05 21:51:35 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:51:35 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (2.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (6.0ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:52:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 55ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-fc0431a5ec405e08130887a6ad9a185c707454f4b285f33fc15693c3eee41df6.css?body=1" for 127.0.0.1 at 2017-01-05 21:52:02 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:52:02 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.8ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:52:13 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 59ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/static_pages_controller.self-ff1baadfbb3b069a5cf0e783d1413e6e3247c81b4dff9ffa13d064629a396ce1.css?body=1" for 127.0.0.1 at 2017-01-05 21:52:13 -0800
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:52:14 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:52:35 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:52:35 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.2ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/index.json.jbuilder (5.4ms)
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:54:02 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:54:02 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (66, 64, 62)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (48, 44, 22)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.6ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'realDonaldTrump') LIMIT 1) subquery_for_count[0m
+  [1m[35mTweet Load (0.5ms)[0m  SELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'realDonaldTrump')  ORDER BY "tweets"."created_at" DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "realDonaldTrump"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "tweets" ("user_id", "tweet_id_str", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 22], ["tweet_id_str", "817168818539757568"], ["text", "So how and why are they so sure about hacking if they never even requested an examination of the computer servers? What is going on?"], ["created_at", "2017-01-06 05:57:59.309348"], ["updated_at", "2017-01-06 05:57:59.309348"]]
+  [1m[35m (2.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "MrTommyCampbell"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."screen_name" = 'MrTommyCampbell' LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("user_id_str", "name", "screen_name", "profile_image_url", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["user_id_str", "30739842"], ["name", "Tommy Campbell"], ["screen_name", "MrTommyCampbell"], ["profile_image_url", "http://pbs.twimg.com/profile_images/723660076368596992/fmNK3u_l_normal.jpg"], ["description", "Comic | Actor | The Dark Knight | Doctor Who | Arrow | Supernatural Voice of Matt Hatter Chronicles | HuffPo | Foodie | Stand-Up Album https://t.co/rrfO829laC"], ["location", "Vancouver"], ["created_at", "2017-01-06 05:57:59.324778"], ["updated_at", "2017-01-06 05:57:59.324778"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tweets" ("user_id", "tweet_id_str", "text", "initial_tweet_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 56], ["tweet_id_str", "817169031325069314"], ["text", "@realDonaldTrump You could just tweet “Guns, Bibles, Taco Bell” and your supporters would believe you’re the greatest man alive."], ["initial_tweet_id", 72], ["created_at", "2017-01-06 05:57:59.329258"], ["updated_at", "2017-01-06 05:57:59.329258"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'RBReich') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "RBReich"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'PutinRF_Eng') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "PutinRF_Eng"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'ConanOBrien') LIMIT 1) subquery_for_count[0m
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'ConanOBrien')  ORDER BY "tweets"."created_at" DESC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "ConanOBrien"]]
+  [1m[35m (1.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'POTUS') LIMIT 1) subquery_for_count
+  [1m[36mTweet Load (1.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'POTUS')  ORDER BY "tweets"."created_at" DESC LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'JerrySeinfeld') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "JerrySeinfeld"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Oprah') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "Oprah"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'KingJames') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "KingJames"]]
+  [1m[35m (1.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'BillGates') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "BillGates"]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'KevinHart4real') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "KevinHart4real"]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Trevornoah') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "Trevornoah"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'CNN') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "CNN"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'StephenAtHome') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "StephenAtHome"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'kanyewest') LIMIT 1) subquery_for_count
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'kanyewest')  ORDER BY "tweets"."created_at" DESC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'danieltosh') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "danieltosh"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'emmawatson') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "EmmaWatson"]]
+  [1m[35m (0.7ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'NASA') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "NASA"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Google') LIMIT 1) subquery_for_count
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1[0m  [["screen_name", "Google"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'JimCarrey') LIMIT 1) subquery_for_count
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'NBCNews') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "NBCNews"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Sethrogen') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "Sethrogen"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'rickygervais') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "rickygervais"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'WilliamShatner') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "WilliamShatner"]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'jack') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "jack"]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'LeoDiCaprio') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "LeoDiCaprio"]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'neiltyson') LIMIT 1) subquery_for_count[0m
+  [1m[35mTweet Load (0.4ms)[0m  SELECT  "tweets".* FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'neiltyson')  ORDER BY "tweets"."created_at" DESC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "tweets" INNER JOIN "users" ON "users"."id" = "tweets"."user_id" WHERE (users.screen_name = 'Pontifex') LIMIT 1) subquery_for_count[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."screen_name" = $1 LIMIT 1  [["screen_name", "Pontifex"]]
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:58:44 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:58:44 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (72, 66, 64)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 56]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.3ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets.json?page=2" for 127.0.0.1 at 2017-01-05 21:59:00 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"2"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 3
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (62, 60, 58)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (22, 32, 25)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 26]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tweets.json?page=3" for 127.0.0.1 at 2017-01-05 21:59:00 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"3"}
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 6[0m
+  [1m[35mTweet Load (0.1ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (56)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (22)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 23]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (1.5ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:59:27 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:59:27 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.3ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (72, 66, 64)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 56]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.5ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 21:59:53 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 21:59:54 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[35mTweet Load (0.3ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (72, 66, 64)[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 56]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.4ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.3ms)
+  Rendered tweets/index.json.jbuilder (5.2ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-05 22:00:18 -0800
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tweets.json?page=1" for 127.0.0.1 at 2017-01-05 22:00:18 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"1"}
+  [1m[36mTweet Load (0.4ms)[0m  [1mSELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 0[0m
+  [1m[35mTweet Load (0.2ms)[0m  SELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (72, 66, 64)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IN (22, 48, 44)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 56]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 50]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 49]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.0ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tweets.json?page=2" for 127.0.0.1 at 2017-01-05 22:00:32 -0800
+Processing by TweetsController#index as JSON
+  Parameters: {"page"=>"2"}
+  [1m[35mTweet Load (0.2ms)[0m  SELECT  "tweets".* FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)  ORDER BY "tweets"."created_at" DESC LIMIT 3 OFFSET 3
+  [1m[36mTweet Load (0.2ms)[0m  [1mSELECT "tweets".* FROM "tweets" WHERE "tweets"."initial_tweet_id" IN (62, 60, 58)[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IN (22, 32, 25)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "tweets" WHERE (tweets.initial_tweet_id IS NULL)[0m
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 46]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.2ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 26]]
+  Rendered tweets/_user.json.jbuilder (0.1ms)
+  Rendered tweets/_tweet_pairs.json.jbuilder (1.1ms)
+  Rendered tweets/index.json.jbuilder (4.7ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 1.2ms)

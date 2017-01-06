@@ -42,7 +42,21 @@ class TwitterRequest
       "jack",
       "LeoDiCaprio",
       "neiltyson",
-      "Pontifex"
+      "Pontifex",
+      "elizabethforma",
+      "danaperino",
+      "NateSilver538",
+      "jaketapper",
+      "buzzfeedben",
+      "billmaher",
+      "mollyesque",
+      "JohnDingell",
+      "davidafrench",
+      "elonjames",
+      "benpolitico",
+      "AlanColmes",
+      "MysteryPollster",
+      "RasmussenPoll"
     ]
 
     # Find popular tweet and popular response for each handle
