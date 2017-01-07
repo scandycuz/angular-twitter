@@ -3,6 +3,7 @@ angular.module('app.mainApp')
     console.log('mainCtrl running');
 
     $scope.loaded = false;
+    $scope.noTweets = false;
 
     // if (!localStorage.hideBanner) {
       $('.info-header').removeClass('hidden');
