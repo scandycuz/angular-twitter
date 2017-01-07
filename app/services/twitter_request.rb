@@ -57,7 +57,8 @@ class TwitterRequest
       "AlanColmes",
       "MysteryPollster",
       "RasmussenPoll",
-      "elonmusk"
+      "elonmusk",
+      "Schwarzenegger"
     ]
 
     # Find popular tweet and popular response for each handle
