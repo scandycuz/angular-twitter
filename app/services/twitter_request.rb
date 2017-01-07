@@ -83,9 +83,9 @@ class TwitterRequest
         })
       end
 
-      if tweets && !tweets['statuses'].empty?
-        tweets = tweets['statuses']
-      else
+      tweets = tweets['statuses'] if tweets
+
+      if !tweets || tweets.empty?
         puts "No new tweets found for #{handle}"
         next
       end
@@ -137,7 +137,14 @@ class TwitterRequest
         "since_id" => most_popular_tweet_id,
         "result_type" => "popular"
       })
+
       response_statuses = response_statuses['statuses'] if response_statuses
+
+      # skip if no popular responses to handle
+      if !response_statuses || response_statuses.empty?
+        puts "No popular responses found for #{handle}"
+        next
+      end
 
       most_popular_response = response_statuses.select do |status|
         status['in_reply_to_status_id'] == most_popular_tweet_id
@@ -145,14 +152,16 @@ class TwitterRequest
         status['favourites_count'] && status['retweet_count']
       end
 
+      # skip if no popular replies to initial tweet
       if !most_popular_response
-        puts "No popular responses for #{handle}'s tweet'"
+        puts "No popular replies for #{handle}'s tweet'"
         next
       end
 
       # make sure two Twitter authors aren't listed in the feed consecutively *cough* Trump *cough*
       last_tweet_author = Tweet.joins(:user).order(created_at: :desc).limit(2).last.user[:screen_name]
-      if handle == last_tweet_author
+      second_to_last_tweet_author = Tweet.joins(:user).order(created_at: :desc).limit(4).last.user[:screen_name]
+      if handle == last_tweet_author || handle == second_to_last_tweet_author
         puts "Skipping #{handle}'s conversation to avoid consecutive authors in feed"
         next
       end
