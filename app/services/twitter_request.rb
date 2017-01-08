@@ -154,7 +154,7 @@ class TwitterRequest
 
       # skip if no popular replies to initial tweet
       if !most_popular_response
-        puts "No popular replies for #{handle}'s tweet'"
+        puts "No popular replies for #{handle}\'s tweet"
         next
       end
 
