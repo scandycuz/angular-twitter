@@ -59,3 +59,5 @@ gem 'ngannotate-rails'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'api-pagination'
+
+gem 'newrelic_rpm'
