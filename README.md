@@ -49,4 +49,4 @@ The ability for users to choose categories of interactions to query for, such as
 
 ### User Profiles
 
-Allow users to create profiles and their own custom feeds.
+Allow users to create profiles and create their own custom feeds.
