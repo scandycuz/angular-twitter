@@ -1,8 +1,8 @@
 # TweetCounterTweet
 
-[StartupGoGo live][site]
+[TweetCounterTweet live][site]
 
-[site]: http://www.startupgogo.xyz
+[site]: http://www.tweetcountertweet.com/
 
 TweetCounterTweet is a full-stack web application that integrates with the Twitter API to automatically populate with the most favourited and retweeted interactions on Twitter. It utilizes AngularJS on the front-end, Ruby on Rails on the back-end, and a PostgreSQL database.
 
