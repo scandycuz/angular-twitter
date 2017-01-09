@@ -10,9 +10,9 @@ TweetCounterTweet is a full-stack web application that integrates with the Twitt
 
 ### Rails integration with Twitter API
 
-Rake tasks periodically query the Twitter API and update the PostgreSQL database.
-
 The Rails RESTful API connects to the Twitter API using an OAuth authentication protocol and uses a combination of HTTP GET queries and server side code to find the most popular tweets and responses.
+
+Rake tasks periodically run the server side code and update the PostgreSQL database.
 
 ### AngularJS integration with Rails RESTful API
 
