@@ -16,7 +16,7 @@ Rake tasks periodically run the server side code and update the PostgreSQL datab
 
 ### AngularJS integration with Rails RESTful API
 
-When the page is initially loaded, the front-end issues a request to the Rails API for the initial tweets. The application utilizes pagination and loading on scroll to minimize the initial load time.
+When the page is initially loaded, the front-end issues a request to the Rails API for the initial tweets. The application then loads additional tweets as the user scrolls to minimize the initial load time.
 
 ### Code Sample
 
