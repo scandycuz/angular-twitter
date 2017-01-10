@@ -202,8 +202,6 @@ class TwitterRequest
           "q" => "from:#{handle}",
           "count" => 10
         })
-        p handle
-        p tweets
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
         tweets = @user.search_tweets({
@@ -211,11 +209,7 @@ class TwitterRequest
           "count" => 10,
           "since_id" => most_recent_tweet_id
         })
-        p handle
-        p tweets
       end
-
-      p tweets
 
       tweets = tweets['statuses'] if tweets
 
