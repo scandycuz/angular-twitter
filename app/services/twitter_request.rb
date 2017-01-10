@@ -191,7 +191,7 @@ class TwitterRequest
     prominent_handles.each do |handle|
 
       # get most recently used tweet for handle
-      most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(created_at: :desc).limit(1) || {}
+      most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(created_at: :desc).limit(1)
 
       # get recent tweets
       # if most recent tweet exists, search only for later tweets
@@ -202,7 +202,6 @@ class TwitterRequest
         })
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
-        p most_recent_tweet_id
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
           "count" => 10,
