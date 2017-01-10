@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110060953) do
+ActiveRecord::Schema.define(version: 20170110063533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "groups", force: :cascade do |t|
+    t.integer  "number",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "handles", force: :cascade do |t|
     t.string   "screen_name", null: false

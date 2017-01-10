@@ -1,0 +1,8 @@
+class CreateGroups < ActiveRecord::Migration
+  def change
+    create_table :groups do |t|
+      t.integer :number, null: false
+      t.timestamps null: false
+    end
+  end
+end

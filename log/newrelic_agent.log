@@ -251,3 +251,112 @@
 [2017-01-09 22:09:53 -0800 trevor-HP-ZBook-17-G2 (2519)] INFO : Installing Rails 4 view instrumentation
 [2017-01-09 22:09:53 -0800 trevor-HP-ZBook-17-G2 (2519)] INFO : Finished instrumentation
 [2017-01-09 22:09:53 -0800 trevor-HP-ZBook-17-G2 (2519)] INFO : Starting Agent shutdown
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Environment: development
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : No known dispatcher detected.
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Application: My Application (Development)
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing Net instrumentation
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 22:35:32 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 22:35:33 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 22:35:33 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 22:35:33 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Finished instrumentation
+[2017-01-09 22:35:33 -0800 trevor-HP-ZBook-17-G2 (3189)] INFO : Starting Agent shutdown
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Environment: development
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : No known dispatcher detected.
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Application: My Application (Development)
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing Net instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 23:00:58 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Finished instrumentation
+[2017-01-09 23:00:59 -0800 trevor-HP-ZBook-17-G2 (3655)] INFO : Starting Agent shutdown
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Environment: development
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : No known dispatcher detected.
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Application: My Application (Development)
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing Net instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 23:01:14 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Finished instrumentation
+[2017-01-09 23:01:15 -0800 trevor-HP-ZBook-17-G2 (3665)] INFO : Starting Agent shutdown
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Environment: development
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : No known dispatcher detected.
+[2017-01-09 23:01:42 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Application: My Application (Development)
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing Net instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 23:01:43 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Finished instrumentation
+[2017-01-09 23:01:44 -0800 trevor-HP-ZBook-17-G2 (3680)] INFO : Starting Agent shutdown
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Environment: development
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : No known dispatcher detected.
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Application: My Application (Development)
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing Net instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 23:02:32 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Finished instrumentation
+[2017-01-09 23:02:33 -0800 trevor-HP-ZBook-17-G2 (3700)] INFO : Starting Agent shutdown
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Environment: development
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : No known dispatcher detected.
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Application: My Application (Development)
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing ActiveJob instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing Net instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Installing Rails 4 view instrumentation
+[2017-01-09 23:03:12 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Finished instrumentation
+[2017-01-09 23:03:15 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1523274/applications/40246599
+[2017-01-09 23:03:36 -0800 trevor-HP-ZBook-17-G2 (3716)] INFO : Starting Agent shutdown
