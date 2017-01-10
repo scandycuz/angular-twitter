@@ -190,6 +190,8 @@ class TwitterRequest
     # Find popular tweet and popular response for each handle
     prominent_handles.each do |handle|
 
+      tweets['statuses'] = []
+
       # get most recently used tweet for handle
       most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(created_at: :desc).limit(1)
 
@@ -211,7 +213,7 @@ class TwitterRequest
 
       tweets = tweets['statuses'] if tweets
 
-      if !tweets || tweets.empty?
+      if tweets.empty?
         puts "No new tweets found for #{handle}"
         next
       end
