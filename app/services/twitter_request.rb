@@ -190,8 +190,6 @@ class TwitterRequest
     # Find popular tweet and popular response for each handle
     prominent_handles.each do |handle|
 
-      tweets= {'statuses': []}
-
       # get most recently used tweet for handle
       most_recent_tweet = Tweet.joins(:user).where("users.screen_name = ?", handle).order(created_at: :desc).limit(1)
 
@@ -209,6 +207,11 @@ class TwitterRequest
           "count" => 10,
           "since_id" => most_recent_tweet_id
         })
+      end
+
+      if !tweets
+        puts "Possible API limit reached"
+        tweets= {'statuses': []}
       end
 
       tweets = tweets['statuses'] if tweets
