@@ -63,5 +63,5 @@ gem 'api-pagination'
 gem 'newrelic_rpm'
 
 group :production do
-  gem 'rails_12factor' # error feedback
+  # gem 'rails_12factor' # error feedback
 end
