@@ -199,19 +199,19 @@ class TwitterRequest
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
           "count" => 10
-        }) || {'statuses' => []}
+        })
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
           "count" => 10,
           "since_id" => most_recent_tweet_id
-        }) || {'statuses' => []}
+        })
       end
 
       tweets = tweets['statuses'] if tweets
 
-      if tweets.empty?
+      if !tweets || tweets.empty?
         puts "No new tweets found for #{handle}"
         next
       end
