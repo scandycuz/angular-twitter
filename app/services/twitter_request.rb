@@ -187,6 +187,8 @@ class TwitterRequest
 
     prominent_handles = prominent_handles.uniq
 
+    p @user
+
     # Find popular tweet and popular response for each handle
     prominent_handles.each do |handle|
 
@@ -200,6 +202,7 @@ class TwitterRequest
           "q" => "from:#{handle}",
           "count" => 10
         })
+        p tweets
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
         tweets = @user.search_tweets({
@@ -207,6 +210,7 @@ class TwitterRequest
           "count" => 10,
           "since_id" => most_recent_tweet_id
         })
+        p tweets
       end
 
       p tweets
