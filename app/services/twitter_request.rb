@@ -166,8 +166,6 @@ class TwitterRequest
       "thegarance",
       "ktumulty",
       "JeffreyGoldberg",
-      "joshtpm",
-      "blakehounshell",
       "rickklein",
       "DLeonhardt",
       "maggieNYT",
@@ -182,6 +180,8 @@ class TwitterRequest
       "TheFix",
       "daveweigel",
       "Lawrence",
+      "joshtpm",
+      "blakehounshell",
       "BorowitzReport"
     ]
 
@@ -201,7 +201,8 @@ class TwitterRequest
           "count" => 10
         })
       else
-        most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i
+        most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
+        p most_recent_tweet_id
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
           "count" => 10,
