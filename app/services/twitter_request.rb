@@ -209,6 +209,15 @@ class TwitterRequest
         })
       end
 
+      if !tweets
+        puts "No tweets, possible API limit reached"
+      end
+      if tweets["errors"]
+        tweets["errors"].each do error
+          p error
+        end
+      end
+
       tweets = tweets['statuses'] if tweets
 
       if !tweets || tweets.empty?
