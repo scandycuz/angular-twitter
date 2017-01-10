@@ -202,7 +202,7 @@ class TwitterRequest
           "q" => "from:#{handle}",
           "count" => 10
         })
-        p '1'
+        p handle
         p tweets
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
@@ -211,7 +211,7 @@ class TwitterRequest
           "count" => 10,
           "since_id" => most_recent_tweet_id
         })
-        p '2'
+        p handle
         p tweets
       end
 
