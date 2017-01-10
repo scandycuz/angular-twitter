@@ -116,8 +116,6 @@ class TwitterRequest
       "nycjim",
       "mtaibbi",
       "mattyglesias",
-      "Lawrence",
-      "BorowitzReport",
       "DianeSawyer",
       "donlemon",
       "markos",
@@ -182,7 +180,9 @@ class TwitterRequest
       "mitchellreports",
       "markknoller",
       "TheFix",
-      "daveweigel"
+      "daveweigel",
+      "Lawrence",
+      "BorowitzReport"
     ]
 
     prominent_handles = prominent_handles.uniq
