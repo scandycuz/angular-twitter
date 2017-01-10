@@ -209,6 +209,8 @@ class TwitterRequest
         })
       end
 
+      p tweets
+
       tweets = tweets['statuses'] if tweets
 
       if !tweets || tweets.empty?
