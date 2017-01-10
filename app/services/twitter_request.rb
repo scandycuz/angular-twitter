@@ -211,7 +211,7 @@ class TwitterRequest
 
       if !tweets
         puts "Possible API limit reached"
-        tweets= {'statuses': []}
+        tweets = {'statuses' => []}
       end
 
       tweets = tweets['statuses'] if tweets
