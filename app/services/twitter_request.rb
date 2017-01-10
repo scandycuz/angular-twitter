@@ -199,19 +199,14 @@ class TwitterRequest
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
           "count" => 10
-        })
+        }) || {'statuses' => []}
       else
         most_recent_tweet_id = most_recent_tweet[0][:tweet_id_str].to_i || 0
         tweets = @user.search_tweets({
           "q" => "from:#{handle}",
           "count" => 10,
           "since_id" => most_recent_tweet_id
-        })
-      end
-
-      if !tweets
-        puts "Possible API limit reached"
-        tweets = {'statuses' => []}
+        }) || {'statuses' => []}
       end
 
       tweets = tweets['statuses'] if tweets
