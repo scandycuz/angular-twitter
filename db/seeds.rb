@@ -353,9 +353,9 @@ handles = Handle.create([
   { screen_name: "DLoesch",
     group: 2
   },
-  # { screen_name: "AnnCoulter",
-  #   group: 2
-  # },
+  { screen_name: "repjohnlewis",
+    group: 2
+  },
   { screen_name: "edhenry",
     group: 2
   },
