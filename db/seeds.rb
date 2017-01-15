@@ -74,9 +74,6 @@ handles = Handle.create([
   { screen_name: "rickygervais",
     group: 1
   },
-  { screen_name: "WilliamShatner",
-    group: 1
-  },
   { screen_name: "jack",
     group: 1
   },
@@ -237,9 +234,6 @@ handles = Handle.create([
     group: 1
   },
   { screen_name: "paulkrugman",
-    group: 1
-  },
-  { screen_name: "seanhannity",
     group: 1
   },
   { screen_name: "wolfblitzer",
@@ -414,9 +408,6 @@ handles = Handle.create([
     group: 2
   },
   { screen_name: "ericbolling",
-    group: 2
-  },
-  { screen_name: "MonicaCrowley",
     group: 2
   },
   { screen_name: "JonahNRO",
