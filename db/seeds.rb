@@ -26,6 +26,9 @@ handles = Handle.create([
   { screen_name: "POTUS",
     group: 1
   },
+  { screen_name: "POTUS44",
+    group: 1
+  },
   { screen_name: "JerrySeinfeld",
     group: 1
   },

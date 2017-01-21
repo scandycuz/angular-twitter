@@ -461,3 +461,23 @@
 [2017-01-20 01:05:12 -0800 trevor-HP-ZBook-17-G2 (1898)] INFO : Finished instrumentation
 [2017-01-20 01:05:13 -0800 trevor-HP-ZBook-17-G2 (1898)] INFO : Doing deferred dependency-detection before Rack startup
 [2017-01-20 01:06:15 -0800 trevor-HP-ZBook-17-G2 (1898)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1523274/applications/40246599
+[2017-01-20 01:09:53 -0800 trevor-HP-ZBook-17-G2 (1898)] INFO : Starting Agent shutdown
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Starting the New Relic agent in "development" environment.
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Reading configuration from config/newrelic.yml (/home/trevor/Desktop/tweet_counter_tweet)
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : New Relic Agent Developer Mode enabled.
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Environment: development
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Dispatcher: webrick
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Application: My Application (Development)
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing ActiveRecord 4 instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing ActiveJob instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing Net instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing Rails 4 Error instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing Rails 4 Controller instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Installing Rails 4 view instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Finished instrumentation
+[2017-01-21 10:25:24 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-01-21 10:25:29 -0800 trevor-HP-ZBook-17-G2 (2487)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1523274/applications/40246599
