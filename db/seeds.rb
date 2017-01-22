@@ -11,9 +11,6 @@ groups = Group.create([
 ])
 
 handles = Handle.create([
-  { screen_name: "realDonaldTrump",
-    group: 1
-  },
   { screen_name: "RBReich",
     group: 1
   },
@@ -84,9 +81,6 @@ handles = Handle.create([
     group: 1
   },
   { screen_name: "neiltyson",
-    group: 1
-  },
-  { screen_name: "Pontifex",
     group: 1
   },
   { screen_name: "elizabethforma",
