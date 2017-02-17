@@ -50,8 +50,6 @@ this.getNextPage = function(callback) {
 
 ## Future Directions for the Project
 
-There are additional features that could further enhance the project.
-
 ### Improved Twitter API integration
 
 Improve Tweet filtering to further increase result relevancy.
