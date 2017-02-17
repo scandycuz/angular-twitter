@@ -16,7 +16,7 @@ The server periodically runs rake tasks to query the Twitter API and cache retri
 
 ### AngularJS integration with Rails RESTful API
 
-The front-end receives the most recent Tweet data from the Rails RESTful API, on initial page load. The Angular front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
+The front-end receives the most recent Tweet data from the Rails RESTful API on initial page load. The Angular front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
 
 ### Code Sample
 
@@ -35,16 +35,13 @@ function loadOnScroll() {
 ```
 
 
-Function to retrieve Tweets from pagination enabled RESTful API:
+Retrieve Tweets from pagination enabled RESTful API:
 
 ```javascript
 this.getNextPage = function(callback) {
   this.pageNum ++;
   $http.get('/tweets.json?page=' + this.pageNum)
   .then( function(response) {
-    if (!response.data.length) {
-      this.pageNum --;
-    }
     return response;
   }.bind(this))
   .then(callback);

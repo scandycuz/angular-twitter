@@ -13,9 +13,6 @@ angular.module("app.mainApp")
     this.pageNum ++;
     $http.get('/tweets.json?page=' + this.pageNum)
     .then( function(response) {
-      if (!response.data.length) {
-        this.pageNum --;
-      }
       return response;
     }.bind(this))
     .then(callback);
