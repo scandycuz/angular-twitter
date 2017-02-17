@@ -56,7 +56,7 @@ Improve Tweet filtering to further increase result relevancy.
 
 ### Categories
 
-Add feature to allow users to choose specific categories of Twitter interactions to query, such as `Entertainment`, or `Politics`.
+Add feature to allow users to choose specific categories of Twitter interactions, such as `Entertainment`, or `Politics`.
 
 ### User Profiles
 
