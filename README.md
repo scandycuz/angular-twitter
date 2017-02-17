@@ -20,7 +20,7 @@ The front-end receives the most recent Tweet data from the Rails RESTful API, on
 
 ### Code Sample
 
-Event listener to load additional Tweets on user scroll:
+Event listener to load additional Tweets on scroll:
 
 ```javascript
 function loadOnScroll() {
