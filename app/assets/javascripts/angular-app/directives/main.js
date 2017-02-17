@@ -6,6 +6,9 @@ angular.module("app.mainApp")
 			if (scope.$last === true) {
 				$timeout(function () {
 					scope.$emit('ngRepeatFinished');
+					setTimeout(function() {
+						scope.$parent.loaded = false;
+					}, 400);
 				});
 			}
 		}

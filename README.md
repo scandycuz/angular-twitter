@@ -4,7 +4,7 @@
 
 [site]: http://www.tweetcountertweet.com/
 
-TweetCounterTweet is a full-stack web application that integrates with the Twitter API to automatically populate with the most favourited and retweeted interactions on Twitter. It utilizes AngularJS on the front-end, Ruby on Rails on the back-end, and a PostgreSQL database.
+TweetCounterTweet is a full-stack web application using AngularJS on the front-end, Ruby on Rails on the back-end, and a PostgreSQL database. The application integrates with the Twitter API to automatically populate with interactions between the most popular handles on Twitter.
 
 ## Features & Implementation
 
@@ -12,27 +12,40 @@ TweetCounterTweet is a full-stack web application that integrates with the Twitt
 
 The Rails RESTful API connects to the Twitter API using an OAuth authentication protocol and uses a combination of HTTP GET queries and server side code to find the most popular tweets and responses.
 
-Rake tasks periodically run the server side code and update the PostgreSQL database.
+The server periodically runs rake tasks to query the Twitter API and cache retrieved data into the database.
 
 ### AngularJS integration with Rails RESTful API
 
-When the page is initially loaded, the front-end issues a request to the Rails API for the initial tweets. The application then loads additional tweets as the user scrolls to minimize the initial load time.
+On initial load, the front-end receives the most recent Tweet data from the Rails RESTful API. The Angular front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
 
 ### Code Sample
 
-AngularJS HTTP query to Rails RESTful API:
+Event listener to load additional Tweets on user scroll:
 
 ```javascript
-// Angular Service Code:
-this.getTweets = function(callback) {
-  $http.get('/tweets.json?page=' + this.pageNum)
-  .then(callback);
-};
+function loadOnScroll() {
+  var scrollOffset = $(window).height() / 2;
 
-// Angular Controller Code:
-dataService.getTweets( function(response) {
-  $scope.tweets = response.data;
-});
+  if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - scrollOffset) {
+    $scope.loaded = true;
+    dataService.getNextPage(appendNewTweets);
+  }
+}
+```
+
+Data Service function to retrieve Tweets from pagination enabled REST API:
+```javascript
+this.getNextPage = function(callback) {
+  this.pageNum ++;
+  $http.get('/tweets.json?page=' + this.pageNum)
+  .then( function(response) {
+    if (!response.data.length) {
+      this.pageNum --;
+    }
+    return response;
+  }.bind(this))
+  .then(callback);
+}
 ```
 
 ## Future Directions for the Project
@@ -41,12 +54,12 @@ In addition the already implemented features, there are additional features that
 
 ### Improved Twitter API integration
 
-Improved Tweet filtering to provide more relevant results.
+Improved Tweet filtering to further increase result relevancy.
 
 ### Categories
 
-The ability for users to choose categories of interactions to query for, such as `Entertainment`, or `Politics`.
+Add feature to allow users to choose specific categories of Twitter interactions to query, such as `Entertainment`, or `Politics`.
 
 ### User Profiles
 
-Allow users to create profiles and create their own custom feeds.
+Allow users to create profiles and create their own customized feeds.

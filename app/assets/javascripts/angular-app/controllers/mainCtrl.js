@@ -75,8 +75,6 @@ angular.module('app.mainApp')
         return $scope.noTweets = true;
       }
 
-      $scope.loaded = false;
-
       $scope.urls = $scope.urls.concat(urls);
       $scope.tweets = existingTweets.concat(newTweets);
     }
@@ -88,9 +86,7 @@ angular.module('app.mainApp')
       if (!$scope.loaded && $(window).scrollTop() > $(document).height() - $(window).height() - scrollOffset) {
         $scope.loaded = true;
 
-        window.setTimeout(function() {
-          dataService.getNextPage(appendNewTweets);
-      	}, 400);
+        dataService.getNextPage(appendNewTweets);
       }
     }
 
