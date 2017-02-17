@@ -16,7 +16,7 @@ The server periodically runs rake tasks to query the Twitter REST API and cache 
 
 ### AngularJS integration with Rails RESTful API
 
-The front-end receives the most recent Tweet data from the Rails REST API on initial page load. The Angular front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
+The front-end receives the most recent Tweet data from the Rails REST API on initial page load. The front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
 
 ### Code Sample
 
