@@ -10,13 +10,13 @@ TweetCounterTweet is a full-stack web application using AngularJS on the front-e
 
 ### Rails integration with Twitter API
 
-The Rails RESTful API connects to the Twitter API using an OAuth authentication protocol and uses a combination of HTTP GET queries and server side code to find the most popular tweets and responses.
+The Rails REST API connects to the Twitter REST API using an OAuth authentication protocol and uses a combination of HTTP GET queries and server side code to find the most popular tweets and responses.
 
-The server periodically runs rake tasks to query the Twitter API and cache retrieved data into the database.
+The server periodically runs rake tasks to query the Twitter REST API and cache retrieved data into the database.
 
 ### AngularJS integration with Rails RESTful API
 
-The front-end receives the most recent Tweet data from the Rails RESTful API on initial page load. The Angular front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
+The front-end receives the most recent Tweet data from the Rails REST API on initial page load. The Angular front-end then seamlessly loads additional RESTful API JSON data as the user scrolls. The data is mapped to the Twitter oEmbed URL format and rendered in the template.
 
 ### Code Sample
 
@@ -34,8 +34,7 @@ function loadOnScroll() {
 }
 ```
 
-
-Retrieve Tweets from pagination enabled RESTful API:
+Retrieve Tweets from pagination enabled Rails REST API:
 
 ```javascript
 this.getNextPage = function(callback) {
